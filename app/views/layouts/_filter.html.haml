@@ -1,0 +1,40 @@
+.filter
+  .filter__contents
+    .filter__contents--left-box
+      %ul
+        %li 
+          = link_to '#' do
+            %span 人気
+            %i.fas.fa-sort-down
+        %li
+          = link_to '#' do
+            %span 写真
+            %i.fas.fa-sort-down
+        %li
+          = link_to '#' do
+            %span 写真の向き
+            %i.fas.fa-sort-down
+        %li
+          = link_to '#' do
+            %span カテゴリー
+            %i.fas.fa-sort-down
+        %li
+          = link_to '#' do
+            %span サイズ
+            %i.fas.fa-sort-down
+        %li
+          = link_to '#' do
+            %span 色
+            %i.fas.fa-sort-down
+        %li
+          = link_to '#' do
+            %span フィルタの解除
+    .filter__contents--right-box
+      .safe-search
+        =check_box_tag :check1
+        =label_tag :check1, "セーフサーチ"
+      .pagenator
+        %span
+          %i.fas.fa-chevron-left
+        %span
+          %i.fas.fa-chevron-right

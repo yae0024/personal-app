@@ -1,0 +1,76 @@
+= render partial: 'layouts/header-search'
+.download-page
+  .download-page__left-box
+    = image_tag @picture.picture.url
+    .comments
+      - if current_user
+        = form_with model: [@picture, @comment], local: true do |f|
+          %i.fas.fa-user-circle
+          = f.text_area :comment, placeholder: "コメントする", rows: "2"
+          = f.submit "SEND"
+      %p コメント一覧
+      - if @comments
+        - @comments.each do |comment|
+          %i.fas.fa-user-circle
+          %p
+            = comment.user.name
+            = comment.created_at.strftime("%Y/%m/%d %H:%M")
+          %p
+            = comment.comment
+  .download-page__right-box
+    .provider-info
+      %i.fas.fa-user-circle
+      %p
+        = @provider.name
+        %span / 3枚の画像
+      %button.coffee コーヒー
+      %button フォローする
+    .valuation
+      = link_to '#' do
+        %i.fas.fa-thumbs-up
+        %span 107
+      = link_to '#' do
+        %i.fas.fa-star
+        %span 134
+      = link_to '#' do
+        %i.fas.fa-share-alt
+    .download-btn
+      = link_to '#' do
+        %i.fas.fa-file-download
+        %span 無料ダウンロード
+    .picture-info
+      .camera
+        = link_to '#' do
+          %i.fas.fa-camera
+          %span Sony Dsc-Rx10
+        %p 14.8mm · ƒ/2.8 · 1/320s · ISO 400
+      .details
+        .detail-item
+          %p 画像タイプ
+          %p JPG
+        .detail-item
+          %p 解像度
+          %p 4864×3648
+        .detail-item
+          %p 作成日
+          %p 2016年6月3日
+        .detail-item
+          %p アップロード
+          %p 2016年6月6日
+        .detail-item
+          %p 閲覧回数
+          %p 35023
+        .detail-item
+          %p ダウンロード
+          %p 15670
+    .license
+      = link_to 'License', '#'
+      %p 商用利用無料
+      %p 帰属表示は必要ありません
+    .likes-at-facebook
+      %p Facebookで「いいね!」する
+      .facebook-share
+        = link_to 'Like', '#'
+        = link_to 'Share', '#'
+    .related-pictures
+      %p 関連の写真

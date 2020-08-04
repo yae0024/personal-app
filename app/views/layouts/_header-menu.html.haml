@@ -1,0 +1,28 @@
+%header
+  .header-left-contents
+    %h1.header-title
+      = link_to 'My WORKS', root_path
+    .picture-type
+      = link_to '写真', '#'
+      = link_to 'イラスト', '#'
+      = link_to 'ベクトル', '#'
+      = link_to '動画', '#'
+  .header-menu
+    = link_to '#', class: 'header-menu__pulldown' do
+      %span 写真の検索
+      %i.fa.fa-angle-down
+    -if user_signed_in?
+      %ul
+        %li
+          = link_to destroy_user_session_path, method: 'DELETE' do
+            %i.fas.fa-user-circle
+        %li
+          = link_to new_picture_path, id: 'upload-btn' do
+            %i.fas.fa-file-upload
+            %span アップロード
+    - else
+      %ul
+        %li
+          = link_to '新規会員登録', new_user_registration_path
+        %li
+          = link_to 'ログイン', new_user_session_path

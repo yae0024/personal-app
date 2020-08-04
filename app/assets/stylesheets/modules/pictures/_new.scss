@@ -1,0 +1,44 @@
+.upload-btn{
+  max-width: 240px;
+  margin: 30px 0px 0px;
+  color: #fff;
+  background-color: #02be6e;
+  border: none;
+  height: 36px;
+}
+
+.upload{
+  padding: 0 20px 15px;
+  display: flex;
+  &__left-box{
+    width: 33.3333%;
+    &__wrap{
+      margin-right: 40px;
+      h2{
+        margin-bottom: 20px;
+        font-size: 18px;
+        font-weight: 400;
+        color: #191b26;
+      }
+      p{
+        margin-bottom: 10px;
+        font-size: 14px;
+        color: #191b26;
+        line-height: 1.6;
+      }
+    }
+  }
+  &__right-box{
+    width: 66.6667%;
+    .input-area{
+      display: flex;
+      justify-content: space-between;
+      .prev-content{
+        img{
+          width: 150px;
+          height: 84px;
+        }
+      }
+    }
+  }
+}

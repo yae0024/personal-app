@@ -1,0 +1,29 @@
+= render partial: 'layouts/header-search'
+.background
+  .sign-up
+    .sign-up__wrapper
+      .swith-tab
+        = link_to 'ログイン', new_user_session_path
+        = link_to '新規登録', '#', class: 'active'
+      .social-auth
+        = link_to '#', class: 'facebook' do
+          %i.fab.fa-facebook-square
+          %span facebook
+        = link_to '#', class: 'google' do
+          %i.fab.fa-google
+          %span Google
+      = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        = render "devise/shared/error_messages", resource: resource
+        .field
+          = f.text_field :name, placeholder: 'ユーザー名', autofocus: true, autocomplete: "name"
+        .field
+          = f.email_field :email, placeholder: 'メールアドレス', autofocus: true, autocomplete: "email"
+        .field
+          = f.password_field :password, placeholder: 'パスワード（６文字以上）', autocomplete: "new-password"
+        .field
+          = f.password_field :password_confirmation, placeholder: 'パスワード（確認用）', autocomplete: "new-password"
+        .actions
+          = f.submit "Sign up", class: 'sign-up-btn'
+    .terms
+      %p この登録を完了されると、私たちの利用条件とプライバシーポリシー に同意されたことになります。
+

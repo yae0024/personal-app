@@ -1,0 +1,99 @@
+header{
+  max-width: 1788px;
+  height: 60px;
+  padding: 0 20px;
+  box-shadow: 0 0 60px rgba(0,0,0,.12);
+  display: flex;
+  justify-content: space-between;
+  .header-left-contents{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    .header-title{
+      margin-right: 40px;
+      font-size: 16px;
+      font-weight: bold;
+      a{
+        text-decoration: none;
+        color: $textColor;
+        font-size: 16px;
+        font-weight: bold;
+      }
+    }
+    // menu
+    .picture-type{
+      a{
+        text-decoration: none;
+        color: #191b26;
+        font-size: 14px;
+        padding: 0 15px 19px;
+      }
+    }
+    // search-box
+    .search-box{
+      width: 70%;
+      position: relative;
+      .search-icon{
+        position: absolute;
+        top: -18px;
+        left: 0;
+        z-index: 1;
+        padding: 10px;
+        color: #555;
+        background: #eee;
+        border-radius: 2px;
+        border: none;
+        cursor: pointer;
+      }
+      .header-search{
+        position: absolute;
+        top: -18px;
+        left: 0;
+        padding-left: 36px;
+        height: 36px;
+        width: 70%;
+        background: #eee;
+        border-radius: 2px;
+        border: none;
+        min-width: 200px;
+        max-width: 500px;
+      }
+    }
+  }
+  .header-menu{
+    display: flex;
+    align-items: center;
+    &__pulldown{
+      text-decoration: none;
+      color: $textColor;
+    }
+    ul{
+      li{
+        display: inline-block;
+        line-height: 60px;
+        height: 60px;
+        padding-left: 20px;
+        a{
+          text-decoration: none;
+          color: $textColor;
+          font-size: 14px;
+          .fa-user-circle{
+            font-size: 35px;
+            color: $blueColor;
+            vertical-align: middle;
+          }
+        }
+        #upload-btn{
+          padding: 10px 26px;
+          background-color: $pointColor;
+          border-radius: 17px;
+          font-size: 14px;
+          color: #fff;
+          i{
+            padding-right: 3px;
+          }
+        }
+      }
+    }
+  }
+}

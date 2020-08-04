@@ -1,0 +1,25 @@
+= render partial: 'layouts/header-search'
+= render partial: 'layouts/members'
+.upload
+  .upload__left-box
+    .upload__left-box__wrap
+      %h2 ファイルをアップロード
+      %p 40MB以内、1辺の長さが3000ピクセル以上の JPG, PNG, PSD, AI, SVG 形式のファイル。 
+      = link_to 'イメージ品質ガイドライン...', '#'
+      %p 300MB以内、解像度 1920x800 ピクセル以上の MPEG, MOV, AVI 形式の動画。動画は60秒を超えてはいけません。 
+      = link_to 'ビデオの品質ガイドライン...', '#'
+      %p MP3, MP4, FLAC and WAV music up to 100 MB. Music Quality Guidelines...
+      .upload-limit
+        %p この期間に残りのアップロード： 10 詳細情報 ...
+      = form_with(model: @picture, url: pictures_path, local: true) do |f|
+        = f.label :picture, class: 'input-box__picture' do
+          %button.upload-btn
+            %p ファイルを選択
+          = f.file_field :picture, id: 'upload-img'
+        = f.submit 'Send', class: 'form__submit'
+  .upload__right-box
+    %h2 Tag media
+    %p Tags are keywords that describe your uploaded media. Without accurate tags, the media cannot be found in search. Therefore, each tag is as important as the image itself. Read our タグ付けのチュートリアル.
+    %hr
+    .input-area
+

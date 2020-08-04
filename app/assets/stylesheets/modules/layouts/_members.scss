@@ -1,0 +1,28 @@
+.members-menu{
+  margin: 30px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: #eee 1px solid;
+  &__left-box{
+    display: flex;
+    a{
+      padding: 10px 0;
+      margin: 0 15px;
+      text-decoration: none;
+      color: $textColor;
+    }
+    .active{
+      color: $blueColor;
+      border-bottom: $blueColor 2px solid;
+    }
+  }
+  &__right-box{
+    a{
+      padding: 10px 0;
+      margin: 0 15px;
+      text-decoration: none;
+      color: $textColor;
+    }
+  }
+}

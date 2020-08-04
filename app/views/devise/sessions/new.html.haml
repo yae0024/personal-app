@@ -1,0 +1,27 @@
+= render partial: 'layouts/header-search'
+.background
+  .sign-up
+    .sign-up__wrapper
+      .swith-tab
+        = link_to 'ログイン', '#', class: 'active'
+        = link_to '新規登録', new_user_registration_path
+      .social-auth
+        = link_to '#', class: 'facebook' do
+          %i.fab.fa-facebook-square
+          %span facebook
+        = link_to '#', class: 'google' do
+          %i.fab.fa-google
+          %span Google
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+        .field
+          = f.email_field :email, autofocus: true, autocomplete: "email"
+        .field
+          = f.password_field :password, autocomplete: "current-password"
+        - if devise_mapping.rememberable?
+          .field.remember-me
+            = f.check_box :remember_me
+            = f.label :remember_me
+        .actions
+          = f.submit "Log in"
+    .terms
+      = render "devise/shared/links"
