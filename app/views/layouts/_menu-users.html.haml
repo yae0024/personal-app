@@ -1,0 +1,14 @@
+#users-accordion.hidden
+  .users-menu
+    .users-menu__list
+      =link_to 'プロフィール', '#'
+      =link_to 'メディア', '#'
+      =link_to 'アップロード', '#'
+      =link_to 'お気に入り', '#'
+      =link_to 'フォロー', '#'
+      =link_to 'メッセージ', '#'
+      =link_to '設定', '#'
+      %hr
+      =link_to '品質評価', '#'
+      %hr
+      = link_to 'ログアウト', destroy_user_session_path, method: 'DELETE'
