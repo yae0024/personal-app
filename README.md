@@ -67,3 +67,13 @@ Photoshop Illustrator などで作った作品をポートフォリオとして
 ### Association
 - belongs_to :picture
 - belongs_to :tag
+
+## commentsテーブル
+|Column|Type|Options|
+|------|----|-------|
+|comment|text|null: false|
+|user|references|null: false, foreign_key: true|
+|picture|references|null: false, foreign_key: true|
+### Association
+- belongs_to :user
+- belongs_to :picture
