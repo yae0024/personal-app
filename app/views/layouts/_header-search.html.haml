@@ -8,7 +8,7 @@
       = f.text_field :search, placeholder: 'キーワードで検索', class: 'header-search'
       -# = f.select :type
   .header-menu
-    = link_to '#', class: 'header-menu__pulldown' do
+    = link_to '#', class: 'header-menu__pulldown', id: 'colums-menu' do
       %span 写真の検索
       %i.fa.fa-angle-down
     -if user_signed_in?

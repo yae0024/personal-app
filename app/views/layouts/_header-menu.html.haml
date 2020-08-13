@@ -8,13 +8,13 @@
       = link_to 'ベクトル', '#'
       = link_to '動画', '#'
   .header-menu
-    = link_to '#', class: 'header-menu__pulldown' do
+    = link_to '#', class: 'header-menu__pulldown', id: 'colums-menu' do
       %span 写真の検索
       %i.fa.fa-angle-down
     -if user_signed_in?
       %ul
         %li
-          = link_to destroy_user_session_path, method: 'DELETE' do
+          = link_to '#', id: 'users-menu' do
             %i.fas.fa-user-circle
         %li
           = link_to new_picture_path, id: 'upload-btn' do
