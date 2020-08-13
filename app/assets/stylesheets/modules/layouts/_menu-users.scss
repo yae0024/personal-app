@@ -1,0 +1,30 @@
+.users-menu{
+  display: inline-block;
+  position: absolute;
+  top: 60px;
+  right: 180px;
+  z-index: 1;
+  box-shadow: 1px 2px 3px rgba(0,0,0,.4);
+  &__list{
+    min-width: 135px;
+    background-color: #191b26;
+    padding: 7px 0;
+    a{
+      display: block;
+      margin: 7px;
+      padding: 5px 15px;
+      text-decoration: none;
+      color: #9aa2b0;
+      font-size: 14px;
+      &:hover{
+        color: #fff;
+        background-color: #202331;
+      }
+    }
+    hr{
+      height: 1px;
+      background-color: #2e303d;
+      border: none;
+    }
+  }
+}
