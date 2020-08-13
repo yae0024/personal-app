@@ -1,8 +1,8 @@
 class Picture < ApplicationRecord
   belongs_to :user
   mount_uploader :picture, ImageUploader
-  has_many :pictures_tags
-  has_many :tag, through: :pictures_tags
+  has_many :pictures_tags, dependent: :destroy
+  has_many :tags, through: :pictures_tags
   has_many :comments
 
   def save_tags(tag_list)
