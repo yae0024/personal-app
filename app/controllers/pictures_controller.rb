@@ -11,10 +11,10 @@ class PicturesController < ApplicationController
   end
 
   def create
-    picture = Picture.new(picture_params)
-    # tag_list = params[:picture][:name].split(",")
-    if picture.save
-      # picture.save_tag(tag_list)                         
+    @picture = Picture.new(picture_params)
+    if @picture.save
+      tag_list = tag_params[:name].split(/[[:blank:]]+/).select(&:present?)
+      @picture.save_tags(tag_list)                   
       flash.now[:alert] = '画像を保存しました'
       render :new
     else
