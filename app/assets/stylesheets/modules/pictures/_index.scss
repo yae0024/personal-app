@@ -1,5 +1,5 @@
 .hero{
-  height: 530px;//削除
+  height: 530px;
   background-image: url(sunflower-field.jpg);
   background-size: cover;
   &__title{
@@ -10,23 +10,23 @@
     text-align: center;
     h1{
       padding: 130px 0 0;
-      font: 700 26px Open Sans,sans-serif;
+      font-weight: 700;
+      font-size: 26px;
     }
     h2{
-      font-size: 24px;
-      font-weight: 400;
       padding: 15px 0 28px;
+      font-weight: 400;
+      font-size: 24px;
     }
   }
   &__search{
     max-width: 800px;
     text-align: center;
     padding: 0 20px;
-    margin: 5px auto 100px;
+    margin: 5px auto;
     .search-box{
-      margin: 5px auto 100px;
       position: relative;
-      .search-icon{
+      &__icon{
         border: none;
         background-color: #fff;
         border-radius: 5px;
@@ -42,7 +42,7 @@
           opacity: .65;
         }
       }
-      .hero-search-box{
+      &__box{
         border-radius: 5px;
         border: none;
         width: 100%;
@@ -54,11 +54,12 @@
 }
 .index-text{
   margin-bottom: 100px;
-  &__wrap{
-    text-align: center;
+  &__group{
+    width: 60%;
     max-width: 1024px;
     margin: 0 auto;
     padding: 100px 20px 0;
+    text-align: center;
     h2{
       font-size: 30px;
       margin-bottom: 20px;
@@ -67,9 +68,37 @@
       margin-bottom: 35px;
       line-height: 1.6;
     }
-    img{
-      width: 10%;
-      padding: 15px;
+    .skill{
+      overflow: hidden;
+      width: 100%;
+      img{
+        float: left;
+        width: 10%;
+        padding: 5%;
+      }
+      p{
+        float: right;
+        width: 80%;
+        margin: 0;
+        padding: 5% 0;
+        text-align: start;
+      }
+    }
+    .tool{
+      overflow: hidden;
+      width: 100%;
+      img{
+        float: left;
+        width: 10%;
+        padding: 5%;
+      }
+      p{
+        float: right;
+        width: 80%;
+        margin: 0;
+        padding: 5% 0;
+        text-align: start;
+      }
     }
     a{
       text-decoration: none;
