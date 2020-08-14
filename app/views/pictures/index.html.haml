@@ -36,4 +36,10 @@
         %h2 無料のユーザー登録
         %p ユーザー登録していただくと画像のアップロードやダウンロードをお試しいただけます。
         = link_to '新規会員登録', new_user_registration_path
+        = link_to '簡単ログイン', '#', id: 'simple-login'
+        .hidden
+          = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+            = f.email_field :email, autofocus: true, autocomplete: "email", id: 'email'
+            = f.password_field :password, autocomplete: "current-password", id: 'password'
+            = f.submit
       
