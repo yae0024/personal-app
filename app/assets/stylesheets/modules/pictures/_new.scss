@@ -6,21 +6,7 @@
     .left-box{
       width: 33.3333%;
       margin-right: 40px;
-      h2{
-        margin-bottom: 20px;
-        font-size: 18px;
-        font-weight: 400;
-        color: $textColor;
-      }
-      p{
-        margin-bottom: 10px;
-        font-size: 14px;
-        color: $textColor;
-        line-height: 1.6;
-        a{
-          text-decoration: none;
-        }
-      }
+      @include UploadPageConstitution();
       .upload-btn{
         margin-top: 20px;
         position: relative;
@@ -47,21 +33,7 @@
     }
     .right-box{
       width: 66.6667%;
-      h2{
-        margin-bottom: 20px;
-        font-size: 18px;
-        font-weight: 400;
-        color: $textColor;
-      }
-      p{
-        margin-bottom: 10px;
-        font-size: 14px;
-        color: $textColor;
-        line-height: 1.6;
-        a{
-          text-decoration: none;
-        }
-      }
+      @include UploadPageConstitution();
       hr{
         margin-top: 20px;
       }
