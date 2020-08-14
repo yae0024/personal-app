@@ -2,3 +2,20 @@
   max-width: 1788px;
   margin: 0 auto;
 }
+@mixin UploadPageConstitution(){
+  h2{
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    color: $textColor;
+  }
+  p{
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: $textColor;
+    line-height: 1.6;
+    a{
+      text-decoration: none;
+    }
+  }
+}
