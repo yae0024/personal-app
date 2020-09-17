@@ -1,6 +1,13 @@
 # App Title
 My Works
 
+# Production  
+[こちら](http://18.178.246.219/)からご覧ください  
+
+### Basic認証
+id admin  
+pass 2222
+
 # Description  
 既存サイトを参考に作成した画像投稿サイトです。  
 Photoshop Illustrator などで作った作品をポートフォリオとして  
