@@ -1,0 +1,14 @@
+= render partial: 'layouts/header-search'
+= render partial: 'layouts/members'
+= render partial: 'layouts/menu-colums'
+= render partial: 'layouts/menu-users'
+.favorite-wrap
+  .favorite-search
+    %select
+      %option 画像
+      %option 動画
+      %option 音楽
+    %input.favorite-search__keyword{name: "", placeholder: "キーワード検索", type: "input"}
+  .favorite-pictures
+    = link_to '#' do
+      = image_tag 'parachute.jpg'

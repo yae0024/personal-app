@@ -1,0 +1,25 @@
+.message-wrap{
+  max-width: 1408px;
+  padding: 0 20px 15px;
+  .message-side-colum{
+    margin-right: 30px;
+    width: 18%;
+    a{
+      display: block;
+      text-decoration: none;
+      color: #191b26;
+      padding: 12px;
+      font-size: 14px
+    }
+    #inbox{
+      background-color: #dedede;
+    }
+    #outbox{
+      background-color: #f7f7f7;
+    }
+    #search-msg{
+      color: #777;
+      border-bottom: 1px solid #ccc;
+    }
+  }
+}

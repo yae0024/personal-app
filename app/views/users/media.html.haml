@@ -1,0 +1,22 @@
+= render partial: 'layouts/header-search'
+= render partial: 'layouts/members'
+= render partial: 'layouts/menu-colums'
+= render partial: 'layouts/menu-users'
+.media-wrap
+  .media-search
+    %select
+      %option 画像
+      %option 動画
+      %option 音楽
+    %select
+      %option アップロードされた日付（昇順）
+      %option アップロードされた日付（降順）
+      %option 人気がある順
+      %option 閲覧回数が多い順
+      %option 人気がある順
+      %option ダウンロード回数が多い順
+      %option いいね！が多い順
+      %option お気に入り登録が多い順
+    %input.media-search__keyword{name: "", placeholder: "キーワード検索", type: "input"}
+  .media-pictures
+    = render partial: 'picture', collection: @pictures

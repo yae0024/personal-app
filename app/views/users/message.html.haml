@@ -1,0 +1,9 @@
+= render partial: 'layouts/header-search'
+= render partial: 'layouts/members'
+= render partial: 'layouts/menu-colums'
+= render partial: 'layouts/menu-users'
+.message-wrap
+  .message-side-colum
+    = link_to '受信トレイ', '#', id: "inbox"
+    = link_to '送信トレイ', '#', id: "outbox"
+    = link_to '検索', '#', id: "search-msg"
