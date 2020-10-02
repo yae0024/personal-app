@@ -1,6 +1,0 @@
-= render partial: 'layouts/header-search'
-= render partial: 'layouts/filter'
-.picture-list
-  - @pictures.each do |picture|
-    = link_to picture_path(picture.id) do
-      = image_tag picture.picture.url

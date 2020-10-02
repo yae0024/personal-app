@@ -1,0 +1,68 @@
+= render partial: 'layouts/header-menu'
+-if user_signed_in?
+  = render partial: 'layouts/menu-colums'
+  = render partial: 'layouts/menu-users'
+.contents
+  .hero
+    .hero__title
+      %h1 My WORKS
+      %h2 Yae Onishi
+    .hero__search
+      = form_with url:search_pictures_path, method: :get,  class: 'search-box', local: true do |f|
+        = button_tag type: 'submit', class: "search-box__icon" do
+          %i.fas.fa-search
+        = f.text_field :search, placeholder: 'キーワードを入力してください', class: 'search-box__box'
+  .index-text
+    -if user_signed_in?
+      .index-text__group
+        %h2 ABOUT ME
+        %p 以前よりプログラムコードに関わる機会はありましたが、<br>徐々に自分でもアプリが作れるくらいの知識を付けたいと思うようになり、<br>2020年2月より本格的にWEBアプリ作成の学習を開始しました。
+        %p 現在はデザインからサーバサイドまで幅広く勉強中です。
+        %p このアプリではフリー素材のダウンロードサイトを模した構成をとりながら<br>自身の画像作品のポートフォリオとして活用したいと思います。
+        = link_to '作品を見る', pictures_path
+      .index-text__group
+        %h2 SKILLS
+        .skill
+          = image_tag 'logos/html5.svg'
+          %p ★★★★★<br>HTMLは以前からprogateやドットインストールを利用して学習していました。<br>いくつか自分でWEBサイトを作成することで、実践的に理解を深めることもできました。<br>HTMLについては必要な知識は身についていると思います。
+        .skill
+          = image_tag 'logos/css3.svg'
+          %p ★★★★★<br>HTMLと合わせてCSSも以前から学習していました。<br>記述の方法は様々ですので、現在はよりきれいなコードが描けるように試行錯誤中です。<br>指定いただいたデザインを再現することは可能です。
+        .skill
+          = image_tag 'logos/javascript.svg'
+          %p ★★★★☆<br>基本的な記述ルールは学習しましたので<br>WEBサイトにつけたい動きがあればWEB上のサンプルコードなどを参考にして<br>カスタマイズしながら記述しています。
+        .skill
+          = image_tag 'logos/jquery.svg'
+          %p ★★★★☆<br>javascriptと同じく、使用したい機能があるときに調べながら実装しています。
+        .skill
+          = image_tag 'logos/ruby.svg'
+          %p ★★★☆☆<br>TECH CAMPのカリキュラムとして3つのアプリケーションを作成し<br>その後チーム開発でフリーマーケットアプリを作成しました。<br>また、このアプリが個人で一から作成する初めての作品になります。
+      .index-text__group
+        %h2 TOOLS
+        .tool
+          = image_tag 'logos/wordpress.svg'
+          %p ★★★☆☆<br>技術評論社 今すぐ使えるかんたんWordPress[WordPress 5.x対応版]の内容を履修
+        .tool
+          = image_tag 'logos/illustrator.svg'
+          %p Adobe Illustrator<br>★★★☆☆<br>ソシムIllustratorレッスンブックの内容を履修
+        .tool
+          = image_tag 'logos/photoshop.svg'
+          %p Adobe Photoshop<br>★★★☆☆<br>ソシムPhotoshopレッスンブックの内容を履修
+        .tool
+          = image_tag 'logos/dreamweaver.svg'
+          %p Adobe Dreamweaver<br>★★★★★<br>ソシムDreamweaverレッスンブックの内容を履修
+    - else
+      .index-text__group
+        %h2 このアプリについて
+        %p このアプリはポートフォリオとして作成したものです。実際にはご利用いただけません。
+        = link_to '画像作品を見る', pictures_path
+      .index-text__group
+        %h2 無料のユーザー登録
+        %p ログインされている状態の時のみ画像のアップロードとダウンロードが可能になっています。<br>簡単ログインボタンをクリックいただくと<br>アカウント作成なしでログインすることができますのでお試しください。
+        = link_to '簡単ログイン', '#', id: 'simple-login'
+        .hidden
+          = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+            = f.email_field :email, autofocus: true, autocomplete: "email", id: 'email'
+            = f.password_field :password, autocomplete: "current-password", id: 'password'
+            = f.submit
+      
