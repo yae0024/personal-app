@@ -1,13 +1,13 @@
 #users-accordion.hidden
   .users-menu
     .users-menu__list
-      =link_to 'プロフィール', '#'
-      =link_to 'メディア', '#'
-      =link_to 'アップロード', '#'
-      =link_to 'お気に入り', '#'
+      =link_to 'プロフィール', user_path(current_user.id)
+      =link_to 'メディア', media_user_path(current_user.id)
+      =link_to 'アップロード', new_picture_path
+      =link_to 'お気に入り', favorite_user_path(current_user.id)
       =link_to 'フォロー', '#'
-      =link_to 'メッセージ', '#'
-      =link_to '設定', '#'
+      =link_to 'メッセージ', message_user_path(current_user.id)
+      =link_to '設定', setting_user_path(current_user.id)
       %hr
       =link_to '品質評価', '#'
       %hr

@@ -1,9 +1,9 @@
 .members-menu
   .members-menu__left-box
-    = link_to 'My media', '#' 
-    = link_to 'アップロード', '#', class: 'active'
-    = link_to 'お気に入り', '#'
-    = link_to 'メッセージ', '#'
-    =  link_to '設定', '#'
+    = link_to 'My media', media_user_path(current_user.id) , class: 'my-media'
+    = link_to 'アップロード', new_picture_path, class: 'upload'
+    = link_to 'お気に入り', favorite_user_path(current_user.id), class: 'favorite'
+    = link_to 'メッセージ', message_user_path(current_user.id), class: 'message'
+    =  link_to '設定', setting_user_path(current_user.id), class: 'setting'
   .members-menu__right-box
-    = link_to '私のプロフィール', '#'
+    = link_to '私のプロフィール', user_path(current_user)

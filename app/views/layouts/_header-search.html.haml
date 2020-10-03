@@ -14,7 +14,7 @@
     -if user_signed_in?
       %ul
         %li
-          = link_to destroy_user_session_path, method: 'DELETE' do
+          = link_to '#', id: 'users-menu' do
             %i.fas.fa-user-circle
         %li
           = link_to new_picture_path, id: 'upload-btn' do
