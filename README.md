@@ -4,7 +4,7 @@ My Works
 # Production  
 [こちら](http://18.178.246.219/)からご覧ください  
 
-### Basic認証
+#### Basic認証情報
 id admin  
 pass 2222
 
@@ -39,7 +39,7 @@ Photoshop Illustrator などで作った作品をポートフォリオとして
 ログインしていない時  
 <img src="https://i.gyazo.com/b860cfde221302970867b9cbf6646f71.jpg" width="480px">  
 ログインしている時  
-<img src="https://gyazo.com/c48f98e1612954d559ea1056925e9d0d.jpg" width="480px">  
+<img src="https://i.gyazo.com/44255b3f3741c18d17bca890469dac94.jpg" width="480px">  
 jQueryを使用したMenuの表示/非表示の切り替え  
 <img src="https://i.gyazo.com/3688b01821ea6e4905e12e04e682c4eb.gif" width="480px">  
 ### UPloadページ  
@@ -47,6 +47,9 @@ jQueryを使用したMenuの表示/非表示の切り替え
 <img src="https://i.gyazo.com/bcf9e01fca62bba21336eb28c51482ea.gif" width="480px">  
 画像へのタグ付  
 <img src="https://i.gyazo.com/ab78b64c6126c8c9afe189621d44aaee.gif" width="480px">  
+### Mediaページ  
+画像削除  
+<img src="https://i.gyazo.com/feab6e0cf97de9a883b446e0c5a1cc75.gif" width="480px">
 
 # Database creation
 
