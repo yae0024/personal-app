@@ -17,10 +17,11 @@
       %span 0
   .media-picture__right-box
     .operation_btn
-      = link_to picture_path(picture.id), method: :DELETE do
+      = link_to '#', id: 'modal-open-btn' do
         %i.fas.fa-trash
       = link_to '#' do
         %i.fas.fa-pen
     = image_tag picture.picture.url
     .status-bar
       %p.status published
+= link_to '', picture_path(picture.id), method: :DELETE, id: 'item-delete-btn'

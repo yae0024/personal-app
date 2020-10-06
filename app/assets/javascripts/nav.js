@@ -30,4 +30,16 @@ document.addEventListener("turbolinks:load", function(){
   }else if(document.URL.match("/setting")) {
     $(".setting").addClass("active");
   }
+  // 確認モーダルの表示
+  let modal_open = document.getElementById("modal-open-btn");
+  modal_open.onclick = function(e) {
+    e.preventDefault();
+    $('#overlay').fadeIn();
+    document.getElementById('modal-close-btn').onclick = function () {
+      $('#overlay').fadeOut();
+    };
+    document.getElementById("delete-comformation-btn").onclick = function () {
+      document.getElementById("item-delete-btn").click();
+    };
+  };
 })

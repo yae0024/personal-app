@@ -20,3 +20,10 @@
     %input.media-search__keyword{name: "", placeholder: "キーワード検索", type: "input"}
   .media-pictures
     = render partial: 'picture', collection: @pictures
+#overlay
+  #modal-window
+    .modal-message-box
+      %div 確認
+      %div 本当に削除しますか？
+    %button#modal-close-btn キャンセル
+    %button#delete-comformation-btn 削除する

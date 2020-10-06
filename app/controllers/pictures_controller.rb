@@ -36,7 +36,7 @@ class PicturesController < ApplicationController
   def destroy
     picture = Picture.find(params[:id])
     picture.destroy
-    redirect_to root_path
+    redirect_to media_user_path(current_user.id)
   end
   
   private
