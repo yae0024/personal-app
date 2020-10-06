@@ -1,0 +1,13 @@
+.setting-wrap{
+  overflow: hidden;
+  max-width: 1408px;
+  padding: 0 20px 15px;
+  .setting-left-box{
+    float: left;
+    width: 50%;
+  }
+  .setting-right-box{
+    float: right;
+    width: 50%;
+  }
+}

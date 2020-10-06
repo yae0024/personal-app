@@ -2,7 +2,6 @@
 @import 'variable';
 @import 'common';
 @import 'mixin/mixin';
-@import 'modules/pictures/all';
 @import 'modules/pictures/index';
 @import 'modules/pictures/new';
 @import 'modules/pictures/search';
@@ -11,6 +10,8 @@
 @import 'modules/device/favorite';
 @import 'modules/device/media';
 @import 'modules/device/message';
+@import 'modules/device/setting';
+@import 'modules/device/show';
 @import 'modules/layouts/filter';
 @import 'modules/layouts/header';
 @import 'modules/layouts/members';

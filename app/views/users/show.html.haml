@@ -1,4 +1,34 @@
 = render partial: 'layouts/header-search'
 = render partial: 'layouts/menu-colums'
 = render partial: 'layouts/menu-users'
-= @user.name
+.profile-top
+  .profile-top__cover
+    .profile-name
+      = @user.name
+    .profile-edit-btn
+      = link_to 'プロフィールの編集', setting_user_path(current_user.id) 
+    .profile-summary
+      .profile-summary__inner
+        %p Yae Onishi・
+        %p 年齢 35・
+        %p Minato City/Japan・
+        %p メンバー歴 2019年9月6日より
+    .profile-icon
+      = image_tag 'blank-profile.png'
+    .profile-data
+      %span
+        %i.fas.fa-images
+        0
+      %span
+        %i.fas.fa-arrow-down
+        0
+      %span
+        %i.fas.fa-thumbs-up
+        0
+      %span
+        %i.fas.fa-star
+        0
+.switching-tab
+  .sort-order
+    %p 新着
+    %p 人気
